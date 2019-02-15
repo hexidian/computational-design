@@ -5,10 +5,12 @@ boolean mid_fill = false;
 
 void setup() {
   size(640, 640);
-  background(0, 0, 0);
 }
 
 void draw() {
+
+  background(0);
+
 
   translate(width/2, height/2);
   rotate(rotated);
@@ -19,11 +21,9 @@ void draw() {
 
   special_moved+=2*special_direction;
 
-  if (special_moved==100) {
+  if (special_moved==-100) {
     mid_fill = !mid_fill;
   }
-
-  background(0, 0, 0);
 
   if (mid_fill) {
     fill(255);
